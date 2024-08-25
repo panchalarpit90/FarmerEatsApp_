@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".signup.BusinessHoursFragment">
+
+        <TextView
+            android:id="@+id/main_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/signup_4_of_4"
+            android:textColor="@color/blackLight"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toTopOf="@id/business_hours_text"
+            app:layout_constraintStart_toStartOf="@id/main_head" />
+
+        <TextView
+            android:id="@+id/business_hours_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/business_hours"
+            android:textColor="@color/light_text"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_head" />
+
+        <TextView
+            android:id="@+id/desc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:text="@string/choose_the_hours_your_farm_is_open_for_pickups_this_will_allow_customers_to_order_deliveries"
+            android:textColor="@color/blackLight"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business_hours_text" />
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/week_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_15sdp"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipSpacing="0dp"
+            app:chipSpacingHorizontal="0dp"
+            app:chipSpacingVertical="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desc_text"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/mon_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/m"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tue_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/t"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wed_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/w"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/thu_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/th"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fri_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/f"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sat_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/s"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sun_chip"
+                style="@style/CustomChipStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@string/su"
+                android:textAlignment="center"
+                android:textAppearance="@style/textChip"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="@dimen/_10sdp"
+                app:chipStrokeWidth="1dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <GridLayout
+            android:id="@+id/gl_time_slots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="2"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:rowCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/week_chip_group">
+
+            <Button
+                android:id="@+id/btn_slot_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/tintColor"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/_8_00am_10_00am"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:shapeAppearanceOverlay="@style/buttomShape" />
+
+
+            <Button
+                android:id="@+id/btn_slot_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/tintColor"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/_10_00am_1_00pm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:shapeAppearanceOverlay="@style/buttomShape" />
+
+            <Button
+                android:id="@+id/btn_slot_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/tintColor"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/_1_00pm_4_00pm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:shapeAppearanceOverlay="@style/buttomShape" />
+
+            <Button
+                android:id="@+id/btn_slot_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/tintColor"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/_4_00pm_7_00pm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:shapeAppearanceOverlay="@style/buttomShape" />
+
+            <Button
+                android:id="@+id/btn_slot_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/tintColor"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/_7_00pm_10_00pm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:shapeAppearanceOverlay="@style/buttomShape" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/back_btn"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_23sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:icon="@drawable/ic_back"
+            app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/big_sign_btn"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:backgroundTint="@color/redBg"
+            android:fontFamily="@font/bevietnam_regular"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/signup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

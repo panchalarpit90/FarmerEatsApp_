@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".signup.VerificationFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/main_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnam_regular"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:fontFamily="@font/bevietnam_regular"
+                android:text="@string/signup_3_of_4"
+                android:textColor="@color/blackLight"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@id/verification_text"
+                app:layout_constraintStart_toStartOf="@id/main_head" />
+
+            <TextView
+                android:id="@+id/verification_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:fontFamily="@font/bevietnam_regular"
+                android:text="@string/verification"
+                android:textColor="@color/light_text"
+                android:textSize="@dimen/_24ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_head" />
+
+            <TextView
+                android:id="@+id/desc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/bevietnam_regular"
+                android:text="@string/attached_proof_of_department_of_agriculture_registrations_i_e_florida_fresh_usda_approved_usda_organic"
+                android:textColor="@color/blackLight"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/verification_text"
+                app:layout_constraintTop_toBottomOf="@id/verification_text" />
+
+            <Button
+                android:id="@+id/attach_btn"
+                style="?attr/materialIconButtonFilledStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:backgroundTint="@color/redBg"
+                app:icon="@drawable/ic_camera"
+                app:iconGravity="textStart"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc_text" />
+
+            <TextView
+                android:id="@+id/attach_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/bevietnam_regular"
+                android:text="@string/attach_proof_of_registration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/desc_text"
+                app:layout_constraintTop_toBottomOf="@+id/desc_text" />
+
+            <TextView
+                android:id="@+id/file_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/text_bg"
+                android:fontFamily="@font/bevietnam_regular"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_45sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/attach_photo_text"
+                app:layout_constraintTop_toBottomOf="@id/attach_photo_text" />
+
+            <Button
+                android:id="@+id/close_btn"
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_close"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/file_name_text_view"
+                app:layout_constraintEnd_toEndOf="@+id/file_name_text_view"
+                app:layout_constraintTop_toTopOf="@+id/file_name_text_view" />
+
+            <Button
+                android:id="@+id/back_btn"
+                style="?attr/materialIconButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:icon="@drawable/ic_back"
+                app:iconTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/big_Continue_btn"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/redBg"
+                android:fontFamily="@font/bevietnam_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/Pcontinue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.farmereats.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".login.LoginFragment">
+
+        <TextView
+            android:id="@+id/main_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/welcome_back"
+            android:textColor="@color/light_text"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_head" />
+
+        <TextView
+            android:id="@+id/new_here_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/new_here"
+            android:textColor="@color/blackLight"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+        <TextView
+            android:id="@+id/create_account_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/text_btn_click"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/create_account"
+            android:textColor="@color/redBg"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/new_here_text"
+            app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/text_bg"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="8dp"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_12sdp"
+            android:scrollbars="none"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackLight"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@+id/new_here_text"
+            app:layout_constraintTop_toBottomOf="@id/new_here_text" />
+
+        <TextView
+            android:id="@+id/enter_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:textColor="@color/redBg"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_edit_text" />
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/text_bg"
+            android:drawableStart="@drawable/ic_password_new"
+            android:drawablePadding="8dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/_12sdp"
+            android:scrollbars="none"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackLight"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@+id/email_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/email_edit_text" />
+
+        <TextView
+            android:id="@+id/enter_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:textColor="@color/redBg"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
+
+        <TextView
+            android:id="@+id/forget_password_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/forget"
+            android:textColor="@color/redBg"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/password_edit_text"
+            app:layout_constraintTop_toTopOf="@id/password_edit_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/big_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:backgroundTint="@color/redBg"
+            android:fontFamily="@font/bevietnam_regular"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/login_nounderline"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+
+        <TextView
+            android:id="@+id/orlogin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/bevietnam_regular"
+            android:text="@string/or_login_with"
+            android:textColor="@color/blackLight"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/big_login_btn" />
+
+        <LinearLayout
+            android:id="@+id/btn_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/orlogin_text">
+
+            <Button
+                android:id="@+id/google_login_btn"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_15sdp"
+                app:icon="@drawable/ic_google"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@null"
+                app:strokeColor="@color/strokeColor" />
+
+            <Button
+                android:id="@+id/apple_login_btn"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_15sdp"
+                app:icon="@drawable/ic_apple"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@null"
+                app:strokeColor="@color/strokeColor" />
+
+            <Button
+                android:id="@+id/facebook_login_btn"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_15sdp"
+                app:icon="@drawable/ic_facebook"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@null"
+                app:strokeColor="@color/strokeColor" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

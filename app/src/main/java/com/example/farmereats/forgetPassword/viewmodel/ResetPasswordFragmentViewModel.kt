@@ -1,0 +1,51 @@
+package com.example.farmereats.forgetPassword.viewmodel
+
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.farmereats.models.LoginResponse
+import com.example.farmereats.models.PasswordReset
+import com.example.farmereats.repository.PostRepository
+import com.example.farmereats.utils.ApiResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class ResetPasswordFragmentViewModel @Inject constructor(private val repository: PostRepository) :
+    ViewModel() {
+
+    private val _getResponse = MutableLiveData<LoginResponse>()
+    val getResponse: LiveData<LoginResponse> = _getResponse
+
+    private val _errorMsg = MutableLiveData<String>()
+    val errorMsg: LiveData<String> = _errorMsg
+
+    fun setNewPassword(reset: PasswordReset) {
+        if (reset.password.isEmpty()) {
+            _errorMsg.value = "Please Enter New Password!"
+            return
+        }
+        if (reset.cpassword.isEmpty()) {
+            _errorMsg.value = "Please Confirm Your Password!"
+            return
+        }
+        viewModelScope.launch {
+            when (val response = repository.resetPassword(reset)) {
+                is ApiResponse.Error -> {
+                    _errorMsg.value = response.exception.message
+                }
+
+                is ApiResponse.Success -> {
+                    _getResponse.value = response.data
+                }
+            }
+        }
+    }
+
+    fun clearErrorMsg() {
+        _errorMsg.value = ""
+    }
+}

@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FarmerEats" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.FarmerEats" parent="Base.Theme.FarmerEats" />
+
+
+    <style  name="ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="background">@drawable/text_bg</item>
+    </style>
+
+    <style name="textChip" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="fontFamily">@font/bevietnam_regular</item>
+    </style>
+
+    <style name="CustomChipStyle2" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_backgroud_color2</item>
+        <item name="android:textColor">@color/chip_text_background2</item>
+        <item name="strokeColor">@color/chip_stroke_color2</item>
+
+    </style>
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1061799043759",
+    "project_id": "login-78234",
+    "storage_bucket": "login-78234.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061799043759:android:b3bc8138ef8651a3d5aa5a",
+        "android_client_info": {
+          "package_name": "com.example.farmereats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061799043759-utm43a4jur8mad0see3s9dd5iiftf90q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farmereats",
+            "certificate_hash": "4f210a0f1732a35736c82e0036c99d1a64d3b19d"
+          }
+        },
+        {
+          "client_id": "1061799043759-10i2i1cduiju1dtatjutjjt1v5qpi8jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByK3kB8GQXUCarDECIUfkhm0M5pmt-QME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061799043759-10i2i1cduiju1dtatjutjjt1v5qpi8jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
