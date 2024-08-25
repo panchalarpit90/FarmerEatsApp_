@@ -1,6 +1,6 @@
                               FarmerEats App
 
-                  Install this App With the Drive Link
+                  Install this App With the Microsoft OneDrive Link
 
 
-https://drive.google.com/file/d/1bM-z12JxbQM2gtqRJRRmzXgiwhoMzOUR/view?usp=drive_link
+https://1drv.ms/u/c/097653c52fc38752/EV75ORF3_NFKhiFqGOATQD0BM9KWhOejUqWh5oXcWW_RVw?e=EyIq9A
